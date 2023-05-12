@@ -2,7 +2,7 @@
 
 body{
     font-family: 'Poppins', sans-serif;
-    height: 5000px;
+    
     margin:0 ;
     padding: 0;
 }
@@ -19,6 +19,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 150px;
 
    
     
@@ -31,6 +32,9 @@ header img{
     margin-left:100px;
     margin-right: 30%;
 }
+header img:hover {
+    cursor: pointer;
+}
 ul{
     display: flex;
     justify-content: space-between;
@@ -40,11 +44,12 @@ ul li{
     list-style: none;
     font-weight: bold;
     font-size: 20px;
+    cursor: pointer;
 }
 header button {
-    margin-top: 40px;
+    
     display: inline-block;
-    margin-top: 16px;
+    
     padding: 16px 48px;
     background: #490c19;
     border-radius: 15px;
@@ -80,9 +85,7 @@ header button {
 
 
 
-  home{
-    padding: 0;
-}
+
 
 .home .slide{
     min-height: 100vh;
@@ -107,25 +110,10 @@ header button {
     padding: 2rem 0;
 }
 
-.swiper-button-next,
-.swiper-button-prev{
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    background: var(--white);
-    color: var(--black);
-}
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover{
-    background: var(--primary);
-    color: var(--white);
-}
 
-.swiper-button-next::after,
-.swiper-button-prev::after{
-    font-size: 2rem;
-}
+
+
 .btn{
     display: inline-block;
     margin-top: 1rem;
@@ -185,7 +173,9 @@ header button:hover{
 }
 .image img:hover {
     width: 120% ;
-    height: 220px;    
+    height: 220px; 
+    transition: 0.9s ease-in-out;
+    cursor: pointer;   
     
 }
 .hide {
@@ -205,6 +195,9 @@ header button:hover{
     width: 500px;
     height: 300px;
     border-radius: 100px;
+}
+.item-img:hover{
+    cursor: pointer;
 }
 .america-container,
 .france-container,
@@ -245,8 +238,158 @@ header button:hover{
         margin: 43px auto;
         font-size: 47px;
     }
+#nav{
+    text-decoration: none;
+    color: black;
+}
 
 
+
+
+
+.footer{
+    background: #0077b6;
+    text-align: center;
+    margin-top:200px ;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.2rem;
+    padding: 1rem 0;
+    color: white;
+}
+
+.footer .box-container .box a{
+    font-size: 1.6rem;
+    display: block;
+    color: white;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a i{
+    color: #0077b6;
+    text-decoration: none;
+   
+}
+
+
+
+.footer .share{
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.footer .share a{
+    color:#0077b6;
+    font-size: 2rem;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    border: .1rem solid #0077b6;
+    margin: .3rem;
+}
+
+.footer .share a:hover{
+    color: white;
+    background: #0077b6;
+    transform: rotate(360deg);
+}
+
+.footer .credit{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: .1rem solid rgba(0, 0, 0, 0.3);
+    color:white;
+}
+
+.footer .credit span{
+    color: #0077b6;
+}
+.box-container h3 {
+    color:white
+}
+#hotel-container{
+    width: 140%;
+    background-color: #0077b6;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 20px;
+    height: 600px;
+    align-items: center;
+    margin-top: 100px;
+    text-align: center;
+
+   
+    
+
+}
+#hotel-container img{
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+
+}
+#hotel-container img:hover {
+    width: 600px;
+    height: 400px;
+    transition: 0.6s ease-in;
+   
+}
+.room{
+    width: 300px;
+    color: black;
+    margin: 200px auto;
+    font-size: 40px;
+}
+.form-container {
+    margin-top: 100px;
+    display: flex;
+    width: 100%;
+    height: 300px;
+    align-items: center;
+    background-color: rgb(205, 194, 194);
+    justify-content: center;
+    
+}
+.form-container label,
+.form-container input {
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #0077b6;
+    height: 60px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-left:20px ;
+    align-items: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 5px;
+
+
+  }
+
+  
+  .form-container input[type="submit"] {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+  }
 
   
   

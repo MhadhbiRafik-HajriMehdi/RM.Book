@@ -1,126 +1,3 @@
-// const carousel = document.querySelector('.carousel');
-// const images = carousel.querySelectorAll('img');
-// const interval = 3000;
-// let index = 0;
-
-
-// let menu = document.querySelector('#menu-btn');
-// let navbar = document.querySelector('.header .navbar');
-
-// menu.onclick = () => {
-//     menu.classList.toggle('fa-times');
-//     navbar.classList.toggle('active');
-// }
-
-// window.onscroll = () => {
-//     menu.classList.remove('fa-times');
-//     navbar.classList.remove('active');
-// }
-
-// var swiper = new Swiper(".home-slider", {
-//     grabCursor:true,
-//     loop:true,
-//     centeredSlides:true,
-//     autoplay: {
-//         delay: 7500,
-//         disableOnInteraction: false,
-//     },
-//     navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//     },
-// });
-
-// var swiper = new Swiper(".room-slider", {
-//     spaceBetween: 20,
-//     grabCursor:true,
-//     loop:true,
-//     centeredSlides:true,
-//     autoplay: {
-//         delay: 7500,
-//         disableOnInteraction: false,
-//     },
-//     pagination: {
-//         el: ".swiper-pagination",
-//         clickable: true,
-//     },
-//     breakpoints: {
-//         0: {
-//             slidesPerView: 1,
-//         },
-//         768: {
-//             slidesPerView: 2,
-//         },
-//         991: {
-//             slidesPerView: 3,
-//         },
-//     },
-// });
-
-// var swiper = new Swiper(".gallery-slider", {
-//     spaceBetween: 10,
-//     grabCursor:true,
-//     loop:true,
-//     centeredSlides:true,
-//     autoplay: {
-//         delay: 1500,
-//         disableOnInteraction: false,
-//     },
-//     pagination: {
-//         el: ".swiper-pagination",
-//         clickable: true,
-//     },
-//     breakpoints: {
-//         0: {
-//             slidesPerView: 1,
-//         },
-//         768: {
-//             slidesPerView: 3,
-//         },
-//         991: {
-//             slidesPerView: 4,
-//         },
-//     },
-// });
-
-// var swiper = new Swiper(".review-slider", {
-//     spaceBetween: 10,
-//     grabCursor:true,
-//     loop:true,
-//     centeredSlides:true,
-//     autoplay: {
-//         delay: 7500,
-//         disableOnInteraction: false,
-//     },
-//     pagination: {
-//         el: ".swiper-pagination",
-//         clickable: true,
-//     },
-// });
-
-// let accordions = document.querySelectorAll('.faqs .row .content .box');
-
-// accordions.forEach(acco =>{
-//     acco.onclick = () =>{
-//         accordions.forEach(subAcco => {subAcco.classList.remove('active')});
-//         acco.classList.add('active');
-//     }
-// })
-
-// $(".btn").on("click",function(){
-//     console.log("clicked")
-// })
-
-
-
-
-
-// setInterval(() => {
-//   images[index].classList.remove('active');
-//   index = (index + 1) % images.length;
-//   images[index].classList.add('active');
-// }, interval);
-
 var hotels= [
     {
       "name": "Isla Bella Beach Resort & Spa - Florida Keys",
@@ -636,7 +513,7 @@ $(document).ready(function() {
     var hotelss = [
        [ "./hotels/france.jpg","france"],
        [ "./hotels/canada.jpg","canada"],
-       [ "/hotels/126.jpg","america"],
+       [ "/hotels/usa1.jpg","america"],
        [ "./hotels/tunisia.jpg","tunisia"],
 
     ];
@@ -663,10 +540,7 @@ let america=hotels.filter(ele=>ele["country"]==="USA")
 let canada=hotels.filter(ele=>ele["country"]==="Canada")
 let tunisia=hotels.filter(ele=>ele["country"]==="Tunisia")
 let france=hotels.filter(ele=>ele["country"]==="France")
-console.log(america)
-console.log(canada)
-console.log(tunisia)
-console.log(france)
+
 
 function display(classs,arr){
 
@@ -697,5 +571,149 @@ display("america-container",america)
 display("france-container",france)
 display("canada-container",canada)
 display("tunisia-container",tunisia)
+// var hotelItem=document.querySelector(".item-img")
+// hotelItem.onclick=function(){
+//   window.location.href = "hotel.html";
+  
+// }
+$(".item-img").on("click",function(){
+  $(location).attr("href","hotel.html")
+  
+})
+
+var hotelcontainer=document.getElementById("hotel-container")
+
+for(let i=0;i<america[0].photos.length;i++){
+  
+  let img=document.createElement("img")
+  img.setAttribute("src",america[0].photos[i])
+  hotelcontainer.appendChild(img)
+}
+function convertdateToDate(day,month)
+   
+{
+    var count=0 
+    if(month-11===1){
+     count=365-31+day
+    
+    }
+    else
+        if(month-10===1){
+        count=365-(30+31)+day
+            
+        }
+    else 
+    if(month-9===1){
+    count=365-(31+30+31)+day
+    
+    }
+    else 
+    if(month-8===1)
+    {
+  count=365-(31+30+31+30)+day
+    }
+    else 
+    if(month-7===1)
+    {
+        count=365-(31+30+31+30+31)+day
+    }
+    else
+        if(month-6===1)
+        {
+            count = 365-(31+30+31+30+31+31)+day
+        }
+    else
+            if(month-5===1)
+            {
+                count=365-(31+30+31+30+31+31+30)+day
+            }
+    else 
+                if(month-4===1)
+                {
+                    count=365-(31+30+31+30+31+31+30+31)+day
+                }
+    else 
+                    if(month-3===1)
+                    {
+                        count=365-(31+30+31+30+31+31+30+31+30)+day
+                    }
+    else 
+                        if(month-2===1)
+                        {
+                            count=365-(31+30+31+30+31+31+30+31+30+31)+day
+                        }
+    else 
+                            if(month-1===1)
+                            {
+                                count=365-(31+30+31+30+31+31+30+31+30+31+28)+day
+                            }
+    else 
+                                count=day
+    return count
+}
+
+
+var value = $("#input").val()
+var arr = []
+$("#btn").on("click" , function(){
+  // $("body").append($("#input").val())
+  // arr.push($("#input").val())
+
+  $("body").append($('#time').val())
+
+var x=$('#time').val()
+console.log(x)
+
+arr.push(x)
+var month=arr[0][5]+arr[0][6]
+var datt=arr[0][8]+arr[0][9]
+month1=parseInt(month)
+date1=parseInt(datt)
+var b=convertdateToDate(date1,month1)
+
+});
+
+
+var nightInput;
+var personInput;
+var roomInput;
+
+$("#night").on("input", function() {
+  nightInput = parseInt($(this).val());
+});
+
+$("#person").on("input", function() {
+  personInput = parseInt($(this).val());
+});
+
+$("#room").on("input", function() {
+  roomInput = parseInt($(this).val());
+  
+});
+let hotelsInput=null
+for(var i=0;i<hotels.length;i++)
+{
+  if(hotelsInput===hotels[i]["name"])
+  {
+    for(var j=0;j<nightInput;j++)
+    {
+hotels[i]["room"].push(count+j)
+
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

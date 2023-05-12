@@ -12,7 +12,7 @@
 <body>
     <header class="header" >
         
-        <img src="https://i.pinimg.com/736x/78/80/6c/78806c52aed087e4fa006a82e4877397.jpg"/>
+        <img src="./hotels/logo.png"/>
     
     
             <ul>
@@ -23,13 +23,29 @@
                 
             </ul>
             <a href="#countrySection"  class="btn choose">book Now</a>
-</header>
+    </header>
 
 
-    </header>  
-    <div class="tunisia-container">
-    
+    <h2 class="room">Rooms</h2>
+    <div id="hotel-container">
+        
     </div>
+    <form class="form-container">
+        <label for="time">Check-in date:</label>
+        <input id="time" type="date">
+      
+        <label for="night">Number of nights:</label>
+        <input id="night" type="number" placeholder="How many nights?">
+      
+        <label for="person">Number of guests:</label>
+        <input id="person" type="number" placeholder="How many guests?">
+      
+        <label for="room">Number of rooms:</label>
+        <input id="room" type="number" placeholder="How many rooms?">
+      
+        <input  id="btn" type="submit" value="Book Now">
+      </form>
+
     <script src="main.js"></script>
 </body>
 </html>
